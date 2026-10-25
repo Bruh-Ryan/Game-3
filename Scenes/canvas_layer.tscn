@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://oi0aqrkd3imj"]
+
+[ext_resource type="Script" uid="uid://dpmn27rclx40i" path="res://Scenes/canvas_layer.gd" id="1_5oaki"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1849963074]
+script = ExtResource("1_5oaki")
+
+[node name="Dailogue_Box" type="ColorRect" parent="." unique_id=1587999302]
+offset_left = 190.0
+offset_top = 253.0
+offset_right = 925.0
+offset_bottom = 438.0
+color = Color(0.11023874, 0.08792456, 0.27363724, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Dailogue_Box" unique_id=1252894758]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 54.0
+offset_right = 717.0
+offset_bottom = 168.0
+color = Color(0.88044804, 0.59880066, 0.24985826, 1)
+
+[node name="Time" type="Label" parent="Dailogue_Box" unique_id=1112748009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 16.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Time Left :"
+
+[node name="Prompt_Label" type="Label" parent="Dailogue_Box" unique_id=1452080309]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 49.0
+offset_right = 725.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+text = "Label 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Highlight" type="Label" parent="Dailogue_Box/Prompt_Label" unique_id=1211468770]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Score" type="Label" parent="Dailogue_Box" unique_id=950914374]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 19.0
+offset_right = 710.0
+offset_bottom = 42.0
+text = "Score :"
+
+[node name="Timer" type="Timer" parent="." unique_id=424839488]
+one_shot = true

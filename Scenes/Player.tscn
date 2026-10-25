@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://d4nseusku1a2u"]
+
+[ext_resource type="Script" uid="uid://djafiiv5i6f5i" path="res://Script/player.gd" id="1_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://crxs7ebhmj2lt" path="res://Assets/KeyboardMouseUI_AssetPack/Individual Tiles/(Recommended) With Anti-Aliasing/Letters + Numbers/LettersNumbers22.png" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://bmyp0dag53w3k" path="res://Assets/KeyboardMouseUI_AssetPack/Individual Tiles/(Recommended) With Anti-Aliasing/Letters + Numbers/LettersNumbers21.png" id="2_gntrk"]
+[ext_resource type="Texture2D" uid="uid://bp1eom74c6psi" path="res://Assets/KeyboardMouseUI_AssetPack/Individual Tiles/(Recommended) With Anti-Aliasing/Letters + Numbers/LettersNumbers36.png" id="3_dewec"]
+[ext_resource type="Texture2D" uid="uid://lqxn1kv7b7fc" path="res://Assets/KeyboardMouseUI_AssetPack/Individual Tiles/(Recommended) With Anti-Aliasing/Letters + Numbers/LettersNumbers35.png" id="4_5ixxa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dewec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kyqiw")
+}],
+"loop": 1,
+"name": &"LP_Pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gntrk")
+}],
+"loop": 1,
+"name": &"LP_Unpressed",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7s4v3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dewec")
+}],
+"loop": 1,
+"name": &"RP_Pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5ixxa")
+}],
+"loop": 1,
+"name": &"RP_Unpressed",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7s4v3"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1670096988]
+script = ExtResource("1_5ixxa")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=838900902]
+
+[node name="Left_Punch" type="AnimatedSprite2D" parent="." unique_id=805412158]
+position = Vector2(-419, 182)
+scale = Vector2(2.745, 2.745)
+sprite_frames = SubResource("SpriteFrames_dewec")
+animation = &"LP_Unpressed"
+
+[node name="Right_Punch" type="AnimatedSprite2D" parent="." unique_id=1481342585]
+position = Vector2(429.99997, 182)
+scale = Vector2(2.745, 2.745)
+sprite_frames = SubResource("SpriteFrames_7s4v3")
+animation = &"RP_Unpressed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=834927744]
+position = Vector2(0, 223)
+shape = SubResource("CircleShape2D_7s4v3")

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dyvgiftsxxmwu"]
+
+[ext_resource type="Texture2D" uid="uid://cac8lrf0knri4" path="res://Assets/BackGround.png" id="1_2wl7v"]
+[ext_resource type="Script" uid="uid://c6tdmwjwcbykj" path="res://Scenes/game_scene.gd" id="1_3mbwn"]
+[ext_resource type="PackedScene" uid="uid://d4nseusku1a2u" path="res://Scenes/Player.tscn" id="2_4bvgx"]
+[ext_resource type="PackedScene" uid="uid://ce11kk4tb5sv1" path="res://Scenes/Enemy.tscn" id="4_jwv4s"]
+[ext_resource type="PackedScene" uid="uid://oi0aqrkd3imj" path="res://Scenes/canvas_layer.tscn" id="5_lohlh"]
+
+[node name="Game_Scene" type="Node2D" unique_id=946680718]
+script = ExtResource("1_3mbwn")
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=1385516348]
+position = Vector2(2, -7)
+scale = Vector2(1.685, 1.685)
+texture = ExtResource("1_2wl7v")
+
+[node name="Player" parent="." unique_id=1670096988 instance=ExtResource("2_4bvgx")]
+position = Vector2(7, 76)
+
+[node name="Enemy" parent="." unique_id=112519215 instance=ExtResource("4_jwv4s")]
+position = Vector2(-5, -80)
+scale = Vector2(1.09, 1.09)
+
+[node name="CanvasLayer" parent="." unique_id=1849963074 instance=ExtResource("5_lohlh")]

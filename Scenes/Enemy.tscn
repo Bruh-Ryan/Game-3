@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://ce11kk4tb5sv1"]
+
+[ext_resource type="Script" uid="uid://cvxah34rlqtka" path="res://Script/enemy.gd" id="1_esfq3"]
+[ext_resource type="Texture2D" uid="uid://cel276fyx75j7" path="res://Assets/Angry.png" id="2_qlal6"]
+[ext_resource type="Texture2D" uid="uid://c8n8eohrivjgr" path="res://Assets/Null.png" id="3_dascy"]
+[ext_resource type="Texture2D" uid="uid://dyjjja2ljnqpe" path="res://Assets/fighting/0.png" id="4_rm7px"]
+[ext_resource type="Texture2D" uid="uid://cab37d1q20yka" path="res://Assets/fighting/1.png" id="5_5yix0"]
+[ext_resource type="Texture2D" uid="uid://dhmq1i3il006g" path="res://Assets/fighting/2.png" id="6_imorw"]
+[ext_resource type="Texture2D" uid="uid://y1jko1rax4i6" path="res://Assets/fighting/3.png" id="7_0vprv"]
+[ext_resource type="Texture2D" uid="uid://22uujltt8hsj" path="res://Assets/fighting/4.png" id="8_ovthj"]
+[ext_resource type="Texture2D" uid="uid://dolfcj7k2560k" path="res://Assets/Infight/0.png" id="9_l2hgq"]
+[ext_resource type="Texture2D" uid="uid://bjtcmv3q2u861" path="res://Assets/Infight/1.png" id="10_1vdrv"]
+[ext_resource type="Texture2D" uid="uid://dnloqkemay60y" path="res://Assets/Infight/2.png" id="11_5sdbb"]
+[ext_resource type="Texture2D" uid="uid://xjgu2eexn70f" path="res://Assets/Infight/3.png" id="12_hfgpu"]
+[ext_resource type="Texture2D" uid="uid://dxvitv68yyl7f" path="res://Assets/Infight/4.png" id="13_xju7k"]
+[ext_resource type="Texture2D" uid="uid://chlgtwqv6fcmi" path="res://Assets/Dailouge.png" id="14_c8a7u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7s4v3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qlal6")
+}],
+"loop": 1,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dascy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rm7px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5yix0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_imorw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0vprv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ovthj")
+}],
+"loop": 0,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_l2hgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1vdrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5sdbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hfgpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xju7k")
+}],
+"loop": 0,
+"name": &"in_fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_c8a7u")
+}],
+"loop": 1,
+"name": &"speak",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="Node2D" unique_id=112519215]
+script = ExtResource("1_esfq3")
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="." unique_id=107677540]
+sprite_frames = SubResource("SpriteFrames_7s4v3")
+animation = &"fight"
